@@ -8,6 +8,17 @@ const Button = (props) => {
   )
 }
 
+const randomColor = () => {
+  let str = '0123456789abcdef'
+  let color = ''
+  for (let i = 0; i < 6; i++) {
+    let index = Math.floor(Math.random() * str.length)
+    color += str[index]
+  }
+  return "#" + color
+}
+
+
 
 function Head (props) {
   const time = 10
@@ -59,16 +70,26 @@ function Main () {
   )
 }
 
+const mystyle = {
+  display: "inline-block",
+  backgroundColor: randomColor(),
+  padding: "5%",
+  verticalAlign: "middle",
+  margin: "1%",
+  borderRadius: "15%",
+}
+
 function Easy() {
+  console.log(mystyle.backgroundColor)
   return (
     <div className="App">
         <div className='parent'>
-          <div className='child'></div>
-          <div className='child'></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
         </div>
         <div className='parent'>
-          <div className='child'></div>
-          <div className='child'></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
         </div>
     </div>
   );

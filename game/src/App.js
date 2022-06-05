@@ -11,14 +11,25 @@ const Button = (props) => {
 const randomColor = () => {
   let str = '0123456789abcdef'
   let color = ''
+  let color2 = ''
   for (let i = 0; i < 6; i++) {
     let index = Math.floor(Math.random() * str.length)
     color += str[index]
+    if (i !== 1 && i !== 5 && i !== 3) {
+      color2 += str[index]
+    }
+    if (i === 5) {
+      color2 += 'f'
+    }
+    if (i === 1) {
+      color2 += 'f'
+    }
+    if (i === 3) {
+      color2 += '1'
+    }
   }
-  return "#" + color
+  return ["#" + color, "#" + color2]
 }
-
-
 
 function Head (props) {
   const time = 10
@@ -82,19 +93,28 @@ function Main () {
 
 
 function Easy() {
+  let color = randomColor()
   const mystyle = {
     display: "inline-block",
-    backgroundColor: randomColor(),
+    backgroundColor: color[0],
     padding: "5%",
     verticalAlign: "middle",
     margin: "1%",
     borderRadius: "15%",
   }
-  console.log(mystyle.backgroundColor)
+  const mystyle2 = {
+    display: "inline-block",
+    backgroundColor: color[1],
+    padding: "5%",
+    verticalAlign: "middle",
+    margin: "1%",
+    borderRadius: "15%",
+  }
+  console.log(color)
   return (
     <div className="App">
         <div className='parent'>
-          <div style={mystyle}></div>
+          <div style={mystyle2}></div>
           <div style={mystyle}></div>
         </div>
         <div className='parent'>
@@ -145,6 +165,7 @@ function Hard () {
     margin: "1%",
     borderRadius: "15%",
   }
+  
   return (
     <div className="App">
         <div className='parent'>

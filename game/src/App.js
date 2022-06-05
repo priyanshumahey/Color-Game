@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react'
-import {useState} from 'react';
+
 
 const Button = (props) => {
   return (
@@ -40,21 +40,16 @@ function App() {
 }
 */
 
-function Show() {
-  return (
-    <div>
-      <h2>Showing</h2>
-    </div>
-  );
-}
-
-
 class App extends React.Component {
   state = {
     mode:"Choose Mode"
   }
+
   render() {
+
+    console.log("Mode: " + this.state.mode)
     return(
+    
     <div>
     <h1>Color Game</h1>
     <h2 className="mode">{this.state.mode}</h2>

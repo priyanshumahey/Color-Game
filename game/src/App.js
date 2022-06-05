@@ -8,18 +8,27 @@ const Button = (props) => {
   )
 }
 
-
-function App () {
+function Head () {
   const [mode, setMode] = React.useState('Choose Mode:')
-  return (
-    <div>
+
+  
+  return(
+  <div>
     <h1>Color Game</h1>
     <h2 className="mode">{mode}</h2>
-
-      <div className="App">
+    <div className="App">
       <Button text="Easy" onClick={() => setMode("Easy")}/>
       <Button text="Medium" onClick={() => setMode("Medium")}/>
       <Button text="Hard" onClick={() => setMode("Hard")}/>
+    </div>
+  </div>
+  )
+}
+
+function Main () {
+  return(
+    <div>
+      <div className="App">
         <div className='parent'>
           <div className='child' border="10px"></div>
           <div className='child'></div>
@@ -36,6 +45,16 @@ function App () {
           <div className='child'></div>
         </div>
       </div>
+    </div>
+    )
+}
+
+function App () {
+  
+  return (
+    <div>
+      <Head />
+      <Main />
     </div>
   )
 }

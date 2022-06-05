@@ -9,16 +9,17 @@ const Button = (props) => {
 }
 
 
-
-
-/*
-function App() {
+function App () {
+  const [mode, setMode] = React.useState('Choose Mode:')
   return (
     <div>
     <h1>Color Game</h1>
+    <h2 className="mode">{mode}</h2>
 
       <div className="App">
-      <Button text="Button that says hello" onClick={alert('Hello')}/> 
+      <Button text="Easy" onClick={() => setMode("Easy")}/>
+      <Button text="Medium" onClick={() => setMode("Medium")}/>
+      <Button text="Hard" onClick={() => setMode("Hard")}/>
         <div className='parent'>
           <div className='child' border="10px"></div>
           <div className='child'></div>
@@ -36,47 +37,8 @@ function App() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-*/
 
-class App extends React.Component {
-  state = {
-    mode:"Choose Mode"
-  }
-
-  render() {
-
-    console.log("Mode: " + this.state.mode)
-    return(
-    
-    <div>
-    <h1>Color Game</h1>
-    <h2 className="mode">{this.state.mode}</h2>
-
-      <div className="App">
-      <Button text="Easy" onClick={() => this.setState({mode: "Easy"})}/>
-      <Button text="Medium" onClick={() => this.setState({mode: "Medium"})}/>
-      <Button text="Hard" onClick={() => this.setState({mode: "Hard"})}/>
-        <div className='parent'>
-          <div className='child' border="10px"></div>
-          <div className='child'></div>
-          <div className='child'></div>
-        </div>
-        <div className='parent'>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
-        </div>
-        <div className='parent'>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
-        </div>
-      </div>
-    </div>
-    )
-  }
-}
 
 export default App;

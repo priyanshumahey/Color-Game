@@ -55,6 +55,12 @@ function Main () {
     sethardisShown(true)
     setMode("Hard")
   }
+  const clear = event => {
+    seteasyisShown(false)
+    setmedisShown(false)
+    sethardisShown(false)
+    setMode("Choose the mode")
+  }
   return(
   <div>
     <h2 className="mode">{mode}</h2>
@@ -63,6 +69,9 @@ function Main () {
       {!easyisShown && !medisShown && !hardisShown && <Button text="Medium" onClick={medClick}/>}
       {!easyisShown && !medisShown && !hardisShown && <Button text="Hard" onClick={hardClick}/>}
     </div>
+    <div className="App">
+      {(easyisShown || medisShown || hardisShown) && <Button text="Change Difficulty" onClick={clear}/>}
+    </div>
     {easyisShown && <Easy />}
     {medisShown && <Med />}
     {hardisShown && <Hard />}
@@ -70,16 +79,17 @@ function Main () {
   )
 }
 
-const mystyle = {
-  display: "inline-block",
-  backgroundColor: randomColor(),
-  padding: "5%",
-  verticalAlign: "middle",
-  margin: "1%",
-  borderRadius: "15%",
-}
+
 
 function Easy() {
+  const mystyle = {
+    display: "inline-block",
+    backgroundColor: randomColor(),
+    padding: "5%",
+    verticalAlign: "middle",
+    margin: "1%",
+    borderRadius: "15%",
+  }
   console.log(mystyle.backgroundColor)
   return (
     <div className="App">
@@ -96,22 +106,30 @@ function Easy() {
 }
 
 function Med () {
+  const mystyle = {
+    display: "inline-block",
+    backgroundColor: randomColor(),
+    padding: "5%",
+    verticalAlign: "middle",
+    margin: "1%",
+    borderRadius: "15%",
+  }
   return (
     <div className="App">
         <div className='parent'>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
         </div>
         <div className='parent'>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
         </div>
         <div className='parent'>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
         </div>
     </div>
   );
@@ -119,31 +137,39 @@ function Med () {
 
 
 function Hard () {
+  const mystyle = {
+    display: "inline-block",
+    backgroundColor: randomColor(),
+    padding: "5%",
+    verticalAlign: "middle",
+    margin: "1%",
+    borderRadius: "15%",
+  }
   return (
     <div className="App">
         <div className='parent'>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
         </div>
         <div className='parent'>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
         </div>
         <div className='parent'>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
         </div>
         <div className='parent'>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
-          <div className='child'></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
+          <div style={mystyle}></div>
         </div>
     </div>
   );

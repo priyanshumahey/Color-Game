@@ -128,7 +128,7 @@ function Easy() {
 function Med () {
   const mystyle = {
     display: "inline-block",
-    backgroundColor: randomColor(),
+    backgroundColor: randomColor()[0],
     padding: "5%",
     verticalAlign: "middle",
     margin: "1%",
@@ -159,7 +159,7 @@ function Med () {
 function Hard () {
   const mystyle = {
     display: "inline-block",
-    backgroundColor: randomColor(),
+    backgroundColor: randomColor()[0],
     padding: "5%",
     verticalAlign: "middle",
     margin: "1%",

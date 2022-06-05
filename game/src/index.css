@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-h1{
+h1, h2{
   text-align: center;
 }
 
@@ -27,4 +27,20 @@ h1{
   vertical-align: middle;
   margin: 1%;
   border-radius: 15%;
+}
+
+button{
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1% 3%;
+  text-align: center;
+  margin: 2%;
+  touch-action: manipulation;
+}
+
+button:hover {
+  transform: scale(1.05);
 }

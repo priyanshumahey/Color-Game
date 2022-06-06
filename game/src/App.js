@@ -8,6 +8,17 @@ const Button = (props) => {
   )
 }
 
+function shuffle(array) {
+  let cI = array.length,  rI;
+  while (cI != 0) {
+    rI = Math.floor(Math.random() * cI);
+    cI--;
+    [array[cI], array[rI]] = [
+      array[rI], array[cI]];
+  }
+  return array;
+}
+
 const randomColor = () => {
   let str = '0123456789abcdef'
   let color = ''
@@ -134,6 +145,7 @@ function Med () {
     margin: "1%",
     borderRadius: "15%",
   }
+
   return (
     <div className="App">
         <div className='parent'>

@@ -9,14 +9,14 @@ const Button = (props) => {
 }
 
 function shuffle(array) {
-  let cI = array.length,  rI;
+  let cI = array.length,  rI
   while (cI != 0) {
-    rI = Math.floor(Math.random() * cI);
-    cI--;
+    rI = Math.floor(Math.random() * cI)
+    cI--
     [array[cI], array[rI]] = [
-      array[rI], array[cI]];
+      array[rI], array[cI]]
   }
-  return array;
+  return array
 }
 
 const randomColor = () => {

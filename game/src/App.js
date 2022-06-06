@@ -104,6 +104,7 @@ function Main () {
 
 
 function Easy() {
+  let finStyle = shuffle([mystyle, mystyle, mystyle, mystyle2])
   let color = randomColor()
   const mystyle = {
     display: "inline-block",
@@ -125,12 +126,12 @@ function Easy() {
   return (
     <div className="App">
         <div className='parent'>
-          <div style={mystyle2}></div>
-          <div style={mystyle}></div>
+          <div style={finStyle[0]}></div>
+          <div style={finStyle[1]}></div>
         </div>
         <div className='parent'>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
+          <div style={finStyle[2]}></div>
+          <div style={finStyle[3]}></div>
         </div>
     </div>
   );

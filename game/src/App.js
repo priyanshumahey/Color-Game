@@ -180,6 +180,7 @@ function Med () {
 
 
 function Hard () {
+  let color = randomColor()
   const mystyle = {
     display: "inline-block",
     backgroundColor: randomColor()[0],
@@ -188,7 +189,15 @@ function Hard () {
     margin: "1%",
     borderRadius: "15%",
   }
-  
+  const mystyle2 = {
+    display: "inline-block",
+    backgroundColor: color[1],
+    padding: "5%",
+    verticalAlign: "middle",
+    margin: "1%",
+    borderRadius: "15%",
+  }
+  let finStyle = shuffle([mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle2])
   return (
     <div className="App">
         <div className='parent'>

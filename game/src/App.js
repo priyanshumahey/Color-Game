@@ -160,19 +160,19 @@ function Med () {
   return (
     <div className="App">
         <div className='parent'>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
+          <div style={finStyle[0]}></div>
+          <div style={finStyle[1]}></div>
+          <div style={finStyle[2]}></div>
         </div>
         <div className='parent'>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
+          <div style={finStyle[3]}></div>
+          <div style={finStyle[4]}></div>
+          <div style={finStyle[5]}></div>
         </div>
         <div className='parent'>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
+          <div style={finStyle[6]}></div>
+          <div style={finStyle[7]}></div>
+          <div style={finStyle[8]}></div>
         </div>
     </div>
   );

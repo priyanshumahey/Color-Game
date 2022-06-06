@@ -201,28 +201,28 @@ function Hard () {
   return (
     <div className="App">
         <div className='parent'>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
+          <div style={finStyle[0]}></div>
+          <div style={finStyle[1]}></div>
+          <div style={finStyle[2]}></div>
+          <div style={finStyle[3]}></div>
         </div>
         <div className='parent'>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
+          <div style={finStyle[4]}></div>
+          <div style={finStyle[5]}></div>
+          <div style={finStyle[6]}></div>
+          <div style={finStyle[7]}></div>
         </div>
         <div className='parent'>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
+          <div style={finStyle[8]}></div>
+          <div style={finStyle[9]}></div>
+          <div style={finStyle[10]}></div>
+          <div style={finStyle[11]}></div>
         </div>
         <div className='parent'>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
-          <div style={mystyle}></div>
+          <div style={finStyle[12]}></div>
+          <div style={finStyle[13]}></div>
+          <div style={finStyle[14]}></div>
+          <div style={finStyle[15]}></div>
         </div>
     </div>
   );

@@ -104,8 +104,7 @@ function Main () {
 
 
 function Easy() {
-  
-  let color = randomColor()
+  var color = randomColor()
   const mystyle = {
     display: "inline-block",
     backgroundColor: color[0],
@@ -123,7 +122,8 @@ function Easy() {
     borderRadius: "15%",
   }
   console.log(color)
-  let finStyle = shuffle([mystyle, mystyle, mystyle, mystyle2])
+  var finStyleEasy = shuffle([mystyle, mystyle, mystyle, mystyle2])
+  var finStyle = finStyleEasy
   return (
     <div className="App">
         <div className='parent'>
@@ -139,10 +139,10 @@ function Easy() {
 }
 
 function Med () {
-  let color = randomColor()
+  var color = randomColor()
   const mystyle = {
     display: "inline-block",
-    backgroundColor: randomColor()[0],
+    backgroundColor: color[0],
     padding: "5%",
     verticalAlign: "middle",
     margin: "1%",
@@ -156,7 +156,7 @@ function Med () {
     margin: "1%",
     borderRadius: "15%",
   }
-  let finStyle = shuffle([mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle2])
+  var finStyle = shuffle([mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle2])
   return (
     <div className="App">
         <div className='parent'>
@@ -180,10 +180,10 @@ function Med () {
 
 
 function Hard () {
-  let color = randomColor()
+  var color = randomColor()
   const mystyle = {
     display: "inline-block",
-    backgroundColor: randomColor()[0],
+    backgroundColor: color[0],
     padding: "5%",
     verticalAlign: "middle",
     margin: "1%",
@@ -197,7 +197,7 @@ function Hard () {
     margin: "1%",
     borderRadius: "15%",
   }
-  let finStyle = shuffle([mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle2])
+  var finStyle = shuffle([mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle2])
   return (
     <div className="App">
         <div className='parent'>

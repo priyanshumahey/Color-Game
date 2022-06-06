@@ -36,7 +36,7 @@ const randomColor = () => {
       color2 += 'f'
     }
     if (i === 3) {
-      color2 += 'f'
+      color2 += '1'
     }
   }
   return ["#" + color, "#" + color2]

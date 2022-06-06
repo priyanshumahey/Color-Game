@@ -156,7 +156,7 @@ function Med () {
     margin: "1%",
     borderRadius: "15%",
   }
-  //let finStyle = shuffle([mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle2])
+  let finStyle = shuffle([mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle, mystyle2])
   return (
     <div className="App">
         <div className='parent'>

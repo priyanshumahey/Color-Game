@@ -10,7 +10,7 @@ const Button = (props) => {
 
 function shuffle(array) {
   let cI = array.length,  rI
-  while (cI != 0) {
+  while (cI !== 0) {
     rI = Math.floor(Math.random() * cI)
     cI--
     [array[cI], array[rI]] = [
@@ -36,7 +36,7 @@ const randomColor = () => {
       color2 += 'f'
     }
     if (i === 3) {
-      color2 += '1'
+      color2 += 'f'
     }
   }
   return ["#" + color, "#" + color2]
@@ -104,7 +104,7 @@ function Main () {
 
 
 function Easy() {
-  let finStyle = shuffle([mystyle, mystyle, mystyle, mystyle2])
+  
   let color = randomColor()
   const mystyle = {
     display: "inline-block",
@@ -123,6 +123,7 @@ function Easy() {
     borderRadius: "15%",
   }
   console.log(color)
+  let finStyle = shuffle([mystyle, mystyle, mystyle, mystyle2])
   return (
     <div className="App">
         <div className='parent'>

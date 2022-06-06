@@ -48,7 +48,7 @@ function Head (props) {
   <div>
     <h1>Color Game</h1>
     <p>Welcome to the Color Game! This is a simple game where the objective is to pick the different color. Start off by picking Easy, Medium or Hard.
-      Then the game will begin and you will have {time} seconds to pick the right color.
+      Then the game will begin and you will have {time} seconds to pick the color that's different from the rest.
     </p>
   </div>
   )

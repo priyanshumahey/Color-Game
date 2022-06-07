@@ -7,9 +7,10 @@ const Button = (props) => {
   )
 }
 
-const Timer = (t) => {
+const Timer = () => {
+  const [count, setCount] = React.useState(10)
   return (
-    <></>
+    <>{count}</>
   )
 }
 
@@ -55,6 +56,7 @@ function Head (props) {
     <p>Welcome to the Color Game! This is a simple game where the objective is to pick the different color. Start off by picking Easy, Medium or Hard.
       Then the game will begin and you will have {time} seconds to pick the color that's different from the rest.
     </p>
+    <Timer />
   </div>
   )
 }

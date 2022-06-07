@@ -6,7 +6,6 @@ const Button = (props) => {
     <button onClick={props.onClick}>{props.text}</button>
   )
 }
-
 const Timer = () => {
   const [count, setCount] = React.useState(10)
   React.useEffect(() => {
@@ -22,13 +21,8 @@ const Timer = () => {
 
 function Example() {
   const [count, setCount] = React.useState(0);
-
-  // Similar to componentDidMount and componentDidUpdate:
   React.useEffect(() => {
-    // Update the document title using the browser API
-    document.title = `You clicked ${count} times`;
-  });
-
+    document.title = `You clicked ${count} times`;});
   return (
     <div>
       <p>You clicked {count} times</p>
@@ -73,7 +67,7 @@ const randomColor = () => {
   return ["#" + color, "#" + color2]
 }
 
-function Head (props) {
+function Head () {
   const time = 10
   return(
   <div>
@@ -87,6 +81,7 @@ function Head (props) {
 }
 
 function Main () {
+  const [counter, setCounter] = React.useState(10)
   const [mode, setMode] = React.useState('Choose Mode:')
   const [easyisShown, seteasyisShown] = React.useState(false)
   const [medisShown, setmedisShown] = React.useState(false)
@@ -115,6 +110,8 @@ function Main () {
     sethardisShown(false)
     setMode("Choose the mode")
   }
+  React.useEffect(() => {
+    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);}, [counter]);
   return(
   <div>
     <h2 className="mode">{mode}</h2>
@@ -127,10 +124,16 @@ function Main () {
       {(easyisShown || medisShown || hardisShown) &&<Button text="Change Difficulty" onClick={clear}/>}
     </div>
     <Example />
-     
-    {easyisShown && <div><Timer /><Easy /></div>}
-    {medisShown && <div><Timer /><Med /></div>}
-    {hardisShown && <div><Timer /><Hard /></div>}
+    <Timer />
+    {easyisShown && <div><Easy /></div>}
+    {easyisShown && <div>
+      <div className="parent">
+        <div>Countdown: {counter}</div>
+      <button onClick={() => setCounter(10)}>Reset</button>
+      </div>
+    </div>}
+    {medisShown && <div><Med /></div>}
+    {hardisShown && <div><Hard /></div>}
   </div>
   )
 }
@@ -149,7 +152,7 @@ function Easy() {
   }
   const mystyle2 = {
     display: "inline-block",
-    backgroundColor: color[1],
+    backgroundColor: "#000000", //color[1],
     padding: "5%",
     verticalAlign: "middle",
     margin: "1%",

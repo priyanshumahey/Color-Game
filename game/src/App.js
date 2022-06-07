@@ -265,10 +265,10 @@ function Hard () {
 
 
 
-function Footer () {
+function Footer (props) {
   return (
     <footer>
-      <h3>Made by Priyanshu Mahey</h3>
+      <h3>Made by {props.name}</h3>
       <h3><a href="https://www.linkedin.com/in/priyanshu-mahey/" rel="noreferrer" target="_blank">LinkedIn</a></h3>
       <h3><a href="https://github.com/priyanshumahey" rel="noreferrer" target="_blank">Github</a></h3>
     </footer>
@@ -281,7 +281,7 @@ function App () {
     <div>
       <Head />
       <Main />
-      <Footer />
+      <Footer name="Priyanshu Mahey"/>
     </div>
   )
 }

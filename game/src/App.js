@@ -15,7 +15,7 @@ const Timer = () => {
   return (
     <div className="parent">
       <div>Countdown: {count}</div>
-      <button onClick={() => setCount(10)}></button>
+      <button onClick={() => setCount(10)}>Reset</button>
     </div>
   )
 }

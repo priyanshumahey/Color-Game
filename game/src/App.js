@@ -62,7 +62,7 @@ function Head (props) {
     <p>Welcome to the Color Game! This is a simple game where the objective is to pick the different color. Start off by picking Easy, Medium or Hard.
       Then the game will begin and you will have {time} seconds to pick the color that's different from the rest.
     </p>
-    <Timer />
+    
   </div>
   )
 }
@@ -105,11 +105,12 @@ function Main () {
       {!easyisShown && !medisShown && !hardisShown && <Button text="Hard" onClick={hardClick}/>}
     </div>
     <div className="App">
-      {(easyisShown || medisShown || hardisShown) && <Button text="Change Difficulty" onClick={clear}/>}
+      {(easyisShown || medisShown || hardisShown) &&<Button text="Change Difficulty" onClick={clear}/>}
     </div>
-    {easyisShown && <Easy />}
-    {medisShown && <Med />}
-    {hardisShown && <Hard />}
+     
+    {easyisShown && <div><Timer /><Easy /></div>}
+    {medisShown && <div><Timer /><Med /></div>}
+    {hardisShown && <div><Timer /><Hard /></div>}
   </div>
   )
 }

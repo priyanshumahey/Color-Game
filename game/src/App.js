@@ -9,8 +9,14 @@ const Button = (props) => {
 
 const Timer = () => {
   const [count, setCount] = React.useState(10)
+  React.useEffect(() => {
+    count > 0 && setTimeout(() => setCount(count - 1), 1000);
+  }, [count]);
   return (
-    <>{count}</>
+    <div className="parent">
+      <div>Countdown: {count}</div>
+      <button onClick={() => setCount(10)}></button>
+    </div>
   )
 }
 

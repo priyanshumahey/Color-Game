@@ -152,7 +152,7 @@ function Easy() {
   }
   const mystyle2 = {
     display: "inline-block",
-    backgroundColor: "#000000", //color[1],
+    backgroundColor: color[1], //"#000000", 
     padding: "5%",
     verticalAlign: "middle",
     margin: "1%",

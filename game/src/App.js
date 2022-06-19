@@ -279,7 +279,6 @@ function Footer (props) {
 }
 
 function App () {
-  
   return (
     <div>
       <Head />

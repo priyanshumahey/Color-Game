@@ -44,10 +44,21 @@ function shuffle(array) {
   return array
 }
 
+function closeColor (color) {
+  //Finds a close color
+  const closeC = ""
+  for (let i = 0; i < 6; i++) {
+    console.log(color[i])
+  }
+  return closeC
+}
+
+
 const randomColor = () => {
   let str = '0123456789abcdef'
   let color = ''
   let color2 = ''
+
   for (let i = 0; i < 6; i++) {
     let index = Math.floor(Math.random() * str.length)
     color += str[index]
@@ -64,6 +75,7 @@ const randomColor = () => {
       color2 += '1'
     }
   }
+  let color3 = closeColor(color)
   return ["#" + color, "#" + color2]
 }
 

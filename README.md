@@ -1,2 +1,2 @@
 # Color Game
- Simple color game built in React
+Color game built using React. Select the difficulty and pick the color that's different from the rest! 
